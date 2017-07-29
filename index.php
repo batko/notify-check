@@ -16,6 +16,10 @@
             $.ajax({
                 type: "POST",
                 url: "checker.php", //tady se volá php skript
+                data: { //parametry
+                    foo: Math.random(),
+                    bar: Math.random()
+                },
                 success: function (payload) {
                     console.log(payload); // tohle to vrací
                     setCountToElemnt("count", payload.count);
